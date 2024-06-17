@@ -23,8 +23,8 @@
 <body>
 <h1>Home Page Viet Nam</h1>
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-    Launch demo modal
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Ch? ký
 </button>
 
 <!-- Modal -->
@@ -45,5 +45,7 @@
         </div>
     </div>
 </div>
+
+
 </body>
 </html>

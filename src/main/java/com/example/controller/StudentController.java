@@ -11,6 +11,15 @@ public class StudentController {
 	@GetMapping
 	public String showHomePage() {
 		System.out.println("Hello");
+		System.out.println(1515151515);
 		return "home";
+	}
+	
+	private int SumInt(int a, int b) {
+		return a + b;
+	}
+	
+	private void Abc() {
+		System.out.println("EER");
 	}
 }

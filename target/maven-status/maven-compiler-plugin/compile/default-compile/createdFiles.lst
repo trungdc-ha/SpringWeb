@@ -1,6 +1,0 @@
-com\example\controller\MFAController.class
-com\example\controller\CustomGoogleAuthenticatorConfig.class
-com\example\controller\StudentController.class
-com\example\controller\CredentialRepository$1.class
-com\example\controller\CredentialRepository$UserTOTP.class
-com\example\controller\CredentialRepository.class
