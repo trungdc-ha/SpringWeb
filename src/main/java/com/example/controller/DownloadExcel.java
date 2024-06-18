@@ -31,7 +31,7 @@ public class DownloadExcel {
 
         List<Person> dataList = new ArrayList<>();
         dataList.add(new Person(1, "Nguyễn Văn A", 20, new BigDecimal(10000)));
-        dataList.add(new Person(2, "Nguyễn Văn B", 20, new BigDecimal(20000)));
+        dataList.add(new Person(2, "B", 20, new BigDecimal(20000)));
         dataList.add(new Person(3, "Nguyễn Văn C", 20, new BigDecimal(30000)));
         dataList.add(new Person(4, "Nguyễn Văn D", 20, new BigDecimal(40000)));
 

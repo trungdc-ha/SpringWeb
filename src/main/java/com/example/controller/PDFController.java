@@ -21,29 +21,30 @@ public class PDFController {
     }
 
     private ResponseEntity<byte[]> download(HttpServletRequest request, HttpServletResponse response) {
-        WebContext context = new WebContext(request, response, servletContext);
-        context.setVariable("eJournalResponse", eJournalResponse);
-        String eJournalHtmlTemplate = templateEngine.process("pdfTemplate", context);
-
-        ByteArrayOutputStream target = new ByteArrayOutputStream();
-        ConverterProperties converterProperties = new ConverterProperties();
-        converterProperties.setBaseUri("http://localhost:8080");
-
-        HtmlConverter.convertToPdf(eJournalHtmlTemplate, target, converterProperties);
-
-        byte[] bytes = target.toByteArray();
-        String fileName = String.join("_", eJournalResponse.getTransactionDate(), eJournalResponse.getRetrievalNumber(), String.valueOf(eJournalResponse.getRequestAmount()));
-
-        HttpHeaders header = new HttpHeaders();
-        header.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename="+fileName+".pdf");
-        header.add("Cache-Control", "no-cache, no-store, must-revalidate");
-        header.add("Pragma", "no-cache");
-        header.add("Expires", "0");
-
-        return ResponseEntity.ok()
-                .headers(header)
-                .contentType(MediaType.APPLICATION_PDF)
-                .body(bytes);
+//        WebContext context = new WebContext(request, response, servletContext);
+//        context.setVariable("eJournalResponse", eJournalResponse);
+//        String eJournalHtmlTemplate = templateEngine.process("pdfTemplate", context);
+//
+//        ByteArrayOutputStream target = new ByteArrayOutputStream();
+//        ConverterProperties converterProperties = new ConverterProperties();
+//        converterProperties.setBaseUri("http://localhost:8080");
+//
+//        HtmlConverter.convertToPdf(eJournalHtmlTemplate, target, converterProperties);
+//
+//        byte[] bytes = target.toByteArray();
+//        String fileName = String.join("_", eJournalResponse.getTransactionDate(), eJournalResponse.getRetrievalNumber(), String.valueOf(eJournalResponse.getRequestAmount()));
+//
+//        HttpHeaders header = new HttpHeaders();
+//        header.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename="+fileName+".pdf");
+//        header.add("Cache-Control", "no-cache, no-store, must-revalidate");
+//        header.add("Pragma", "no-cache");
+//        header.add("Expires", "0");
+//
+//        return ResponseEntity.ok()
+//                .headers(header)
+//                .contentType(MediaType.APPLICATION_PDF)
+//                .body(bytes);
+    return null;
     }
 
     public static void main(String args[]) throws IOException {
