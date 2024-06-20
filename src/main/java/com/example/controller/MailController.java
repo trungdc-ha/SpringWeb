@@ -25,7 +25,7 @@ public class MailController {
 
     @RequestMapping("/sendEmail")
     public String sendEmail() throws MessagingException {
-        sendEmail("Demo send mail", "Chao moi nguoi", "teenboytg2@gmail.com");
+        sendEmail("Thử lần 2", "Đạng test mail", "abc@gmail.com");
         return "redirect:/";
     }
 
